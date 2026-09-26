@@ -1,0 +1,8 @@
+adminer\.php
+administrator
+manager\/html
+phpmyadmin
+pma
+server-info
+server-status
+wp-json\/wp\/v2\/users

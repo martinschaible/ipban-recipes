@@ -1,0 +1,11 @@
+\+CSCOE\+
+HNAP1
+RDWeb
+_profiler
+actuator\/env
+autodiscover
+boaform
+ecp
+global-protect
+owa
+vendor\/phpunit\/phpunit\/src\/Util\/PHP\/eval-stdin\.php
