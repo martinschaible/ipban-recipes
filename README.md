@@ -1,4 +1,4 @@
-# IPBan Recipes
+# Curated Recipes for IPBan
 
 Trigger lists for [IPBan](https://github.com/DigitalRuby/IPBan). Each file in `lists/` names paths that scanners request when they look for secrets, admin panels, shells, or a specific product. A hit is a reason to ban the client IP.
 
@@ -17,6 +17,8 @@ Characters that are special in a regular expression are escaped:
 | `+` | `\+` |
 
 `wp-admin` matches any request whose path contains that folder. `wp-config\.php\.bak` matches that filename only.
+
+Short filenames in `lists/files-php.txt` start with `\/`. The name must follow a slash, so `\/i\.php` matches `/i.php` and does not match `api.php`. Extension patterns such as `\.sql` stay without that slash, because they must still match `/backup.sql`.
 
 ## Lists
 
@@ -43,3 +45,6 @@ Characters that are special in a regular expression are escaped:
 On a site without WordPress, a request for any of these is a probe. On a WordPress site, visitors and the application request `wp-content` and `wp-includes` on ordinary page views. Assigning this list there bans normal traffic.
 
 Do not merge this list into `lists/files-wordpress.txt`. That file stays valid on WordPress, because it targets config and log files that should never be served.
+
+<br>
+<p align="center">Made with :heart: and :coffee:</p>
