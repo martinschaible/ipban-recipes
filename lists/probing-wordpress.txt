@@ -1,3 +1,4 @@
+wp-config\.php
 wp-login\.php
 wp-admin
 wp-content
