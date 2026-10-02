@@ -25,6 +25,7 @@ Short filenames in `lists/files-php.txt` start with `\/`. The name must follow a
 | File | Use it when |
 | --- | --- |
 | `lists/files-sensitive.txt` | Any site. Secrets, dotfiles, SQL dumps, cloud credentials, and VCS metadata. |
+| `lists/files-ai.txt` | Any site. AI coding-agent configs and credentials (Claude, Cursor, Codex, Continue, Gemini, Aider, OpenCode, and related MCP files). |
 | `lists/files-credentials.txt` | Any site. Further credential files, framework config, and backup archives. |
 | `lists/files-admin.txt` | Any site. Database and server admin panels, plus WordPress user enumeration at `wp-json/wp/v2/users`. |
 | `lists/files-products.txt` | Any site. Paths that belong to other products (PHPUnit, Spring, routers, Exchange, VPN portals). |
