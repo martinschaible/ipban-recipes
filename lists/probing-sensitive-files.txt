@@ -78,9 +78,6 @@ _wpeprivate\/config\.json
 appsettings\.json
 aws-key\.yml
 aws\/credentials
-backup\.tar\.gz
-backup\.sql
-backup\.zip
 composer\.json
 composer\.lock
 config\.json
