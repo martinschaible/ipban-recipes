@@ -22,17 +22,37 @@ Short filenames in `lists/files-php.txt` start with `\/`. The name must follow a
 
 ## Lists
 
-| File | Use it when |
+| ID | File | Use it when |
+| -- | ---- | ----------- |
+| 11 | `lists/probing-ai-configurations.txt` | AI coding-agent configs and credentials (Claude, Cursor, Codex, Continue, Gemini, Aider, OpenCode, and related MCP files) |
+| 12 | `lists/probing-wordpress.txt` | Only needed for websites that do **not** run WordPress |
+| 13 | `lists/probing-sensitive-files.txt` | Secrets, dotfiles, SQL dumps, cloud credentials, and VCS metadata |
+| 14 | `lists/probing-sensitive-folders.txt` | Folders that must not be reachable over HTTP (VCS, SSH/cloud tooling, IDE dirs, backups, vendor, node_modules) |
+| 15 | `lists/probing-credentials.txt` | Credential files, framework config, etc |
+| 16 | `lists/probing-backups.txt` | Any form of backup files, mostly from databases |
+| 17 | `lists/probing-webshells.txt` | Fixed webshell filenames from hacked servers |
+| 18 | `lists/probing-php-files.txt` | Short PHP names commonly dropped in as probes or shells. Several names are generic and can match a real file |
+| 19 | `lists/probing-admin-files.txt` | Database and server admin panels, plus WordPress user enumeration at `wp-json/wp/v2/users` |
+| 20 | `lists/probing-product-files.txt` | Paths that belong to other products (PHPUnit, Spring, routers, Exchange, VPN portals) |
+| 30 | `lists/probing-wordpress-files.txt` | Requests for `wp-config.php`, its backup copies and other sensitive files |
+
+## Webshell
+
+A webshell is a small PHP file that an attacker uploads after breaking into a server. Calling it from a browser or a script gives remote control: read and write files, run commands, and install more malware. It is a back door left on the site.
+
+`lists/probing-webshells.txt` lists fixed filenames of well-known shells:
+
+| File | Meaning |
 | --- | --- |
-| `lists/files-sensitive.txt` | Any site. Secrets, dotfiles, SQL dumps, cloud credentials, and VCS metadata. |
-| `lists/files-ai.txt` | Any site. AI coding-agent configs and credentials (Claude, Cursor, Codex, Continue, Gemini, Aider, OpenCode, and related MCP files). |
-| `lists/files-credentials.txt` | Any site. Further credential files, framework config, and backup archives. |
-| `lists/files-admin.txt` | Any site. Database and server admin panels, plus WordPress user enumeration at `wp-json/wp/v2/users`. |
-| `lists/files-products.txt` | Any site. Paths that belong to other products (PHPUnit, Spring, routers, Exchange, VPN portals). |
-| `lists/files-php.txt` | Any site. Short PHP names commonly dropped in as probes or shells. Several names are generic (`admin.php`, `info.php`, `file.php`) and can match a real file. |
-| `lists/files-webshell.txt` | Any site. Fixed webshell filenames. |
-| `lists/files-wordpress.txt` | WordPress sites included. Requests for `wp-config.php`, its backup copies, and `wp-content/debug.log`. Those files must not be downloaded, including on a real WordPress site. |
-| `lists/probing-wordpress.txt` | Sites that do **not** run WordPress. |
+| `c99.php` | C99, a classic PHP webshell |
+| `r57.php` | R57, another classic PHP webshell |
+| `wso.php` | WSO (“Web Shell by oRb”), often behind a login form |
+| `shell.php` | Generic name used by many droppers |
+| `cmd.php` | Often a minimal shell that only runs system commands |
+
+Scanners request these names because the same shells are often left under exactly those filenames on compromised hosts. A hit usually returns 404 and means someone is looking for an existing shell, not that your site is already infected.
+
+This list differs from credential or AI probes: those look for config files. This list looks for the door the attacker left behind.
 
 ## Sites that are not WordPress
 
@@ -45,7 +65,7 @@ Short filenames in `lists/files-php.txt` start with `\/`. The name must follow a
 
 On a site without WordPress, a request for any of these is a probe. On a WordPress site, visitors and the application request `wp-content` and `wp-includes` on ordinary page views. Assigning this list there bans normal traffic.
 
-Do not merge this list into `lists/files-wordpress.txt`. That file stays valid on WordPress, because it targets config and log files that should never be served.
+Do not merge this list into `lists/probing-wordpress-files.txt`. That file stays valid on WordPress, because it targets config and log files that should never be served.
 
 <br>
 <p align="center">Made with :heart: and :coffee:</p>
