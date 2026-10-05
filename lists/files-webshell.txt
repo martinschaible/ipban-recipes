@@ -1,5 +1,0 @@
-c99\.php
-cmd\.php
-r57\.php
-shell\.php
-wso\.php
