@@ -1,0 +1,22 @@
+    <LogFile>
+        <Id>30</Id>
+        <Source>http - Probing WordPress Files</Source>
+        <PathAndMask>
+            /var/log/httpd/access_log
+            /var/log/nginx/access.log
+        </PathAndMask>
+        <FailedLoginRegex><![CDATA[^(?<ipaddress>[^\s]+)\s[^\s]+\s[^\s]+\s\[(?<timestamp>[^\]]+)\]\s"(?:GET|POST)\s+(?<log>.*?$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/probing-wordpress-files.txt)[^\n]*]]></FailedLoginRegex>
+        <FailedLoginRegexTimestampFormat>dd/MMM/yyyy:HH:mm:ss zzz</FailedLoginRegexTimestampFormat>
+        <FailedLoginLogLevel>Warning</FailedLoginLogLevel>
+        <MinimumTimeBetweenFailedLoginAttempts />
+        <SuccessfulLoginRegex>
+        </SuccessfulLoginRegex>
+        <SuccessfulLoginRegexTimestampFormat />
+        <SuccessfulLoginLogLevel>Warning</SuccessfulLoginLogLevel>
+        <PlatformRegex><![CDATA[Linux]]></PlatformRegex>
+        <PingInterval>5000</PingInterval>
+        <MaxFileSize>0</MaxFileSize>
+        <FailedLoginThreshold>1</FailedLoginThreshold>
+        <NotificationFlags>None</NotificationFlags>
+        <Description>Requests for wp-config.php, its backup copies and other sensitive files</Description>
+    </LogFile>

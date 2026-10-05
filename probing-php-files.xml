@@ -1,0 +1,22 @@
+    <LogFile>
+        <Id>18</Id>
+        <Source>http - Probing PHP Files</Source>
+        <PathAndMask>
+            /var/log/httpd/access_log
+            /var/log/nginx/access.log
+        </PathAndMask>
+        <FailedLoginRegex><![CDATA[^(?<ipaddress>[^\s]+)\s[^\s]+\s[^\s]+\s\[(?<timestamp>[^\]]+)\]\s"(?:GET|POST)\s+(?<log>.*?$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/probing-php-files.txt)[^\n]*]]></FailedLoginRegex>
+        <FailedLoginRegexTimestampFormat>dd/MMM/yyyy:HH:mm:ss zzz</FailedLoginRegexTimestampFormat>
+        <FailedLoginLogLevel>Warning</FailedLoginLogLevel>
+        <MinimumTimeBetweenFailedLoginAttempts />
+        <SuccessfulLoginRegex>
+        </SuccessfulLoginRegex>
+        <SuccessfulLoginRegexTimestampFormat />
+        <SuccessfulLoginLogLevel>Warning</SuccessfulLoginLogLevel>
+        <PlatformRegex><![CDATA[Linux]]></PlatformRegex>
+        <PingInterval>5000</PingInterval>
+        <MaxFileSize>0</MaxFileSize>
+        <FailedLoginThreshold>1</FailedLoginThreshold>
+        <NotificationFlags>None</NotificationFlags>
+        <Description>Short PHP names commonly dropped in as probes or shells. Several names are generic and can match a real file</Description>
+    </LogFile>
