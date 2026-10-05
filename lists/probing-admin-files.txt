@@ -1,8 +1,12 @@
+admin\/login_uid\.php
 adminer\.php
 administrator
+kcfinder\/upload\.php
 manager\/html
 phpmyadmin
 pma
 server-info
 server-status
+sphider\/admin\/admin\.php
+web\/database\/manager
 wp-json\/wp\/v2\/users
