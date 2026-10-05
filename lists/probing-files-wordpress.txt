@@ -1,0 +1,13 @@
+wp-admin/install\.php
+wp-admin/setup-config\.php
+wp-config\.php
+wp-config\.php~
+wp-config\.php\.bak
+wp-config\.php\.old
+wp-config\.php\.orig
+wp-config\.php\.save
+wp-config\.php\.txt
+wp-config\.php\.swp
+wp-content\/debug\.log
+wp-includes\/version\.php
+wp\.php
