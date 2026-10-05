@@ -35,6 +35,8 @@ Short filenames in `lists/files-php.txt` start with `\/`. The name must follow a
 | 19 | `lists/probing-admin-files.txt` | Database and server admin panels, plus WordPress user enumeration at `wp-json/wp/v2/users` |
 | 20 | `lists/probing-product-files.txt` | Paths that belong to other products (PHPUnit, Spring, routers, Exchange, VPN portals) |
 | 30 | `lists/probing-wordpress-files.txt` | Requests for `wp-config.php`, its backup copies and other sensitive files |
+| 31 | `lists/probing-wordpress-wp-cron.php.txt` | `wp-cron.php` is commonly locked down. Scanners probe it heavily. On WordPress, use a real system cron instead of the HTTP pseudo-cron |
+| 32 | `lists/probing-wordpress-xmlrpc.php.txt` | Scanners abuse `xmlrpc.php` for auth brute force and pingback amplification |
 
 ## Webshell
 
