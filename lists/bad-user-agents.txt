@@ -1,0 +1,25 @@
+\bAcunetix\b
+\bCensysInspect\b
+\bDirbuster\b
+\bFHscan\b
+\bgobuster\b
+\bHavij\b
+\bJbrofuzz\b
+\bJorgee\b
+\blibredtail-http\b
+\bmasscan\b
+\bMorfeus\ Fucking\ Scanner\b
+\bmuhstik-scan\b
+\bNessus\b
+\bNikto\b
+\bNmap\b
+\bNuclei\b
+\bOpenVAS\b
+\bscan\.lol\b
+\bShodan\b
+\bSqlmap\b
+\bsysscan\b
+\bT0PHackTeam\b
+\bWhatweb\b
+\bWPScan\b
+\bzgrab\b
