@@ -1,0 +1,22 @@
+    <LogFile>
+        <Id>17</Id>
+        <Source>http - Probing Webshells</Source>
+        <PathAndMask>
+            /var/log/httpd/access_log
+            /var/log/nginx/access.log
+        </PathAndMask>
+        <FailedLoginRegex><![CDATA[^(?<ipaddress>[^\s]+)\s[^\s]+\s[^\s]+\s\[(?<timestamp>[^\]]+)\]\s"(?:GET|POST)\s+(?<log>.*?$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/probing-webshells.txt)[^\n]*]]></FailedLoginRegex>
+        <FailedLoginRegexTimestampFormat />
+        <FailedLoginLogLevel>Warning</FailedLoginLogLevel>
+        <MinimumTimeBetweenFailedLoginAttempts />
+        <SuccessfulLoginRegex>
+        </SuccessfulLoginRegex>
+        <SuccessfulLoginRegexTimestampFormat />
+        <SuccessfulLoginLogLevel>Warning</SuccessfulLoginLogLevel>
+        <PlatformRegex><![CDATA[Linux]]></PlatformRegex>
+        <PingInterval>5000</PingInterval>
+        <MaxFileSize>16777216</MaxFileSize>
+        <FailedLoginThreshold>1</FailedLoginThreshold>
+        <NotificationFlags>None</NotificationFlags>
+        <Description>Fixed webshell filenames from hacked servers</Description>
+    </LogFile>  
