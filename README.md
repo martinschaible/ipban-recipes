@@ -24,6 +24,8 @@ Short filenames in `lists/files-php.txt` start with `\/`. The name must follow a
 
 | ID | File | Use it when |
 | -- | ---- | ----------- |
+| 02 | `lists/ssh-bad-usernames.txt` | Well known user names used for a login attempt |
+| 03 | `lists/ssh-bad-usernames-internal.txt` | User names related to us or customers used for a login attempt |
 | 11 | `lists/probing-ai-configurations.txt` | AI coding-agent configs and credentials (Claude, Cursor, Codex, Continue, Gemini, Aider, OpenCode, and related MCP files) |
 | 12 | `lists/probing-wordpress.txt` | Only needed for websites that do **not** run WordPress |
 | 13 | `lists/probing-sensitive-files.txt` | Secrets, dotfiles, SQL dumps, cloud credentials, and VCS metadata |
