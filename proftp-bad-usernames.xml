@@ -1,13 +1,12 @@
     <LogFile>
-        <Id>02</Id>
-        <Source>SSH - Bad Username</Source>
+        <Id>40</Id>
+        <Source>ProFTP - Bad Username</Source>
         <PathAndMask>
-            /var/log/auth*.log
-            /var/log/secure*
-            /var/log/messages
+            /var/log/proftpd/auth.log
+            /var/log/proftpd/*.log
         </PathAndMask>
-        <FailedLoginRegex><![CDATA[(?<log>(?:invalid|illegal)\s+user)\s+(?<username>$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/ssh-bad-usernames.txt$$)\s+from\s+(?<ipaddress>[^\s]+)]]></FailedLoginRegex>
-        <FailedLoginRegexTimestampFormat />
+        <FailedLoginRegex><![CDATA[ProFTPd\s+\[\d+\]\s+(?<ipaddress>[^\s]+)\s+\[(?<timestamp>[^\]]+)\]\s+"USER\s+(?<username>$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/proftp-bad-usernames.txt$$)"\s+(?<log>331)|ProFTPd\s+\[\d+\]\s+(?<ipaddress>[^\s]+)\s+\[(?<timestamp>[^\]]+)\]\s+"PASS\s+\(hidden\)"\s+(?<log>530)]]></FailedLoginRegex>
+        <FailedLoginRegexTimestampFormat>dd/MMM/yyyy:HH:mm:ss zzz</FailedLoginRegexTimestampFormat>
         <FailedLoginLogLevel>Warning</FailedLoginLogLevel>
         <MinimumTimeBetweenFailedLoginAttempts />
         <SuccessfulLoginRegex>
