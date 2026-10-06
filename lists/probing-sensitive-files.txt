@@ -75,6 +75,7 @@
 \.svn\/entries
 \.vscode\/sftp\.json
 _wpeprivate\/config\.json
+appsettings\.Development\.json
 appsettings\.json
 aws-key\.yml
 aws\/credentials

@@ -10,6 +10,7 @@ dana-na\/
 dms\/out\/out\.login\.php
 ecp
 global-protect
+login\.action
 owa
 remote\/login
 repeater\.php
@@ -21,4 +22,5 @@ sitecore\/admin\/
 sitecore\/login\/
 sitefinity\/authenticate\/swt
 solr\/
+v2\/_catalog
 vendor\/phpunit\/phpunit\/src\/Util\/PHP\/eval-stdin\.php

@@ -1,3 +1,5 @@
+___proxy_subdomain_cpanel
+___proxy_subdomain_whm\/login
 admin\/login_uid\.php
 adminer\.php
 administrator

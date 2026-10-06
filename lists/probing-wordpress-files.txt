@@ -1,5 +1,9 @@
+rest_route=%2Fbatch%2Fv1
+rest_route=\/batch\/v1
 wp-admin/install\.php
 wp-admin/setup-config\.php
+wp-admin/wplog\.php
+wp-conffq\.php
 wp-config\.php
 wp-config\.php~
 wp-config\.php\.bak
@@ -9,5 +13,8 @@ wp-config\.php\.save
 wp-config\.php\.txt
 wp-config\.php\.swp
 wp-content\/debug\.log
+wp-content\/plugins\/form\/up\.php
+wp-content\/plugins\/hellopress\/wp_filemanager\.php
 wp-includes\/version\.php
+wp-json\/batch\/v1
 wp\.php
