@@ -18,5 +18,5 @@
         <MaxFileSize>0</MaxFileSize>
         <FailedLoginThreshold>1</FailedLoginThreshold>
         <NotificationFlags>None</NotificationFlags>
-        <Description>Requests for wp-config.php, its backup copies and other sensitive files</Description>
+        <Description>Requests for wp-config.php, its backup copies, other sensitive files, and wp-json/batch/v1</Description>
     </LogFile>
