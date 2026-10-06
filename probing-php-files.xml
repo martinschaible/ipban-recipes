@@ -5,7 +5,7 @@
             /var/log/httpd/access_log
             /var/log/nginx/access.log
         </PathAndMask>
-        <FailedLoginRegex><![CDATA[^(?<ipaddress>[^\s]+)\s[^\s]+\s[^\s]+\s\[(?<timestamp>[^\]]+)\]\s"(?:GET|POST)\s+(?<log>.*?$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/probing-php-files.txt)[^\n]*]]></FailedLoginRegex>
+        <FailedLoginRegex><![CDATA[^(?<ipaddress>[^\s]+)\s[^\s]+\s[^\s]+\s\[(?<timestamp>[^\]]+)\]\s"(?:GET|POST)\s+(?<log>.*?$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/probing-php-files.txt$$)[^\n]*]]></FailedLoginRegex>
         <FailedLoginRegexTimestampFormat>dd/MMM/yyyy:HH:mm:ss zzz</FailedLoginRegexTimestampFormat>
         <FailedLoginLogLevel>Warning</FailedLoginLogLevel>
         <MinimumTimeBetweenFailedLoginAttempts />

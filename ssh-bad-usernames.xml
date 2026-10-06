@@ -1,11 +1,12 @@
     <LogFile>
-        <Id>17</Id>
-        <Source>http - Probing Webshells</Source>
+        <Id>02</Id>
+        <Source>SSH - Bad Username</Source>
         <PathAndMask>
-            /var/log/httpd/access_log
-            /var/log/nginx/access.log
+            /var/log/auth*.log
+            /var/log/secure*
+            /var/log/messages
         </PathAndMask>
-        <FailedLoginRegex><![CDATA[^(?<ipaddress>[^\s]+)\s[^\s]+\s[^\s]+\s\[(?<timestamp>[^\]]+)\]\s"(?:GET|POST)\s+(?<log>.*?$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/probing-webshells.txt$$)[^\n]*]]></FailedLoginRegex>
+        <FailedLoginRegex><![CDATA[(?<log>(?:invalid|illegal)\s+user)\s+(?$$file:https://raw.githubusercontent.com/martinschaible/ipban-recipes/refs/heads/main/lists/ssh-bad-usernames.txt$$)\s+from\s+(?<ipaddress>[^\s]+)]]></FailedLoginRegex>
         <FailedLoginRegexTimestampFormat />
         <FailedLoginLogLevel>Warning</FailedLoginLogLevel>
         <MinimumTimeBetweenFailedLoginAttempts />
@@ -18,5 +19,5 @@
         <MaxFileSize>16777216</MaxFileSize>
         <FailedLoginThreshold>1</FailedLoginThreshold>
         <NotificationFlags>None</NotificationFlags>
-        <Description>Fixed webshell filenames from hacked servers</Description>
-    </LogFile>  
+        <Description>Well known user names used for a login attempt</Description>
+    </LogFile>
