@@ -72,5 +72,18 @@ On a site without WordPress, a request for any of these is a probe. On a WordPre
 
 Do not merge this list into `lists/probing-wordpress-files.txt`. That file stays valid on WordPress, because it targets config and log files that should never be served.
 
+## Collect probe paths from logs
+
+`tools/collect-probe-paths.sh` runs on a Linux server. It reads **nginx** access logs only (not httpd), keeps lines with status **403** or **404**, strips the query string, and writes a deduplicated list of paths with counts. On DirectAdmin it also picks up `/var/log/nginx/domains/*.log` (domain access logs, not only files named `access.log`).
+
+```bash
+chmod +x tools/collect-probe-paths.sh
+sudo ./tools/collect-probe-paths.sh -o /root/probe-paths.txt
+```
+
+The terminal only reports success and the number of unique paths, e.g. `OK: 142 unique paths -> /root/probe-paths.txt`. The file itself contains lines like `25 /wp-login.php`.
+
+Fetch the file with SFTP/SCP and use it to review new probing patterns for `lists/`.
+
 <br>
 <p align="center">Made with :heart: and :coffee:</p>
