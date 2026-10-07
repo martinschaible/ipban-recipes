@@ -1,3 +1,4 @@
+ALFA_DATA\/alfacgiapi
 alfa-rex\.php
 alfa3\.php
 antichat\.php
@@ -8,17 +9,21 @@ cmd\.asp
 cmd\.aspx
 cmd\.jsp
 cmd\.php
+elgrns\.php
 filesman\.php
 php-backdoor\.php
 phpspy\.php
 r00t\.php
 r57\.php
 r58\.php
+sale\/search\/detail
 shell\.php
+shop\/customer\/bookmark\.php
 simple-backdoor\.php
 smevk\.php
 weevely\.php
 wso\.php
 wso2\.8\.5\.php
 xleet\.php
+xleetshell\.php
 zehir4\.php

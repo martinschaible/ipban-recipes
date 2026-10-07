@@ -75,7 +75,9 @@
 \.subversion
 \.svn
 \.svn\/entries
+\.vite\/manifest\.json
 \.vscode\/sftp\.json
+@vite\/env
 _wpeprivate\/config\.json
 appsettings\.Development\.json
 appsettings\.Production\.json
