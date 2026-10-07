@@ -5,6 +5,7 @@
 \.claude\.json
 \.claude\/\.credentials\.json
 \.claude\/settings\.json
+\.claude\/settings\.local\.json
 \.codeium\/windsurf\/mcp_config\.json
 \.codex\/auth\.json
 \.codex\/auth\.json~

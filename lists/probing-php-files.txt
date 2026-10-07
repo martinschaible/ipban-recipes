@@ -28,6 +28,7 @@
 \/mar\.php
 \/new\.php
 \/php\.php
+\/phpinfo
 \/phpinfo\.php
 \/radio\.php
 \/simple\.php
