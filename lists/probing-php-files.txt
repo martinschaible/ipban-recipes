@@ -1,6 +1,7 @@
 ﻿\/0\.php
 \/1\.php
 \/1337\.php
+\/166\.php
 \/222\.php
 \/24\.php
 \/a\.php
@@ -12,6 +13,7 @@
 \/bak\.php
 \/baxa1\.php
 \/blacks\.php
+\/cae\.php
 \/ccc\.php
 \/chosen\.php
 \/classwithtostring\.php
@@ -41,3 +43,4 @@
 \/wp_blog_footer\.php
 \/ws\.php
 \/xx\.php
+\/z60\.php
